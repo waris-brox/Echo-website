@@ -777,10 +777,6 @@
   <nav>
     <div class="nav-logo">
       <div class="nav-logo-img">
-        <!--
-          LOGO: Replace the src below with your GitHub raw image link
-          Example: https://raw.githubusercontent.com/waris-brox/Echo-app/main/assets/echo-logo.png
-        -->
         <img
           src="Large.png"
           alt="Echo Logo"
@@ -816,11 +812,11 @@
 
       <div class="hero-buttons">
         <a class="btn-primary" href="#download">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
           Download Free
         </a>
         <a class="btn-secondary" href="#features">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></svg>
           See Features
         </a>
       </div>
@@ -832,10 +828,6 @@
         <div class="orb-ring orb-ring-1"></div>
         <div class="orb-core">
           <div class="orb-logo-inner" id="orbLogoInner">
-            <!--
-              ORB LOGO: Replace src with your GitHub raw image link
-              Example: https://raw.githubusercontent.com/waris-brox/Echo-app/main/assets/echo-logo.png
-            -->
             <img
               id="orbLogoImg"
               src="Large.png"
@@ -1017,11 +1009,6 @@
           One APK. Full features. No subscription, no account needed. Just install and start talking.
         </p>
 
-        <!--
-          DOWNLOAD BUTTON:
-          Replace href="#" with your actual APK download link or release page URL.
-          Example: https://github.com/waris-brox/Echo-app/releases/latest/download/echo.apk
-        -->
         <a class="download-btn" href="#" id="downloadBtn">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download Echo APK
@@ -1046,7 +1033,6 @@
 
   </main>
 
-  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
   <footer>
     <div class="footer-brand">Echo</div>
     <p class="footer-text">Your personal AI friend, built with ❤️ by Waris</p>
@@ -1057,9 +1043,7 @@
     </div>
   </footer>
 
-  <!-- ─── SCRIPTS ────────────────────────────────────────────────── -->
   <script>
-    /* === CANVAS PARTICLE BACKGROUND === */
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
     let W, H, particles = [];
@@ -1098,7 +1082,6 @@
 
     for (let i = 0; i < 120; i++) particles.push(new Particle());
 
-    /* Subtle grid lines */
     function drawGrid() {
       ctx.strokeStyle = 'rgba(124,92,252,0.04)';
       ctx.lineWidth = 1;
@@ -1119,7 +1102,6 @@
     }
     loop();
 
-    /* === SCROLL REVEAL === */
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((e, i) => {
@@ -1131,7 +1113,6 @@
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
 
-    /* === FLOATING ORB PARTICLES === */
     const orbWrap = document.getElementById('orbWrap');
     function spawnOrbParticle() {
       const p = document.createElement('div');
@@ -1149,7 +1130,6 @@
     }
     setInterval(spawnOrbParticle, 400);
 
-    /* === DOWNLOAD BUTTON FEEDBACK === */
     document.getElementById('downloadBtn').addEventListener('click', function(e) {
       const href = this.getAttribute('href');
       if (href === '#') {
@@ -1165,5 +1145,4 @@
     });
   </script>
 </body>
-</html>
-
+          </html>
